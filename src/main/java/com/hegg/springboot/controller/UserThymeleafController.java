@@ -58,7 +58,7 @@ public class UserThymeleafController {
             int result = userService.insertSelective(user);
         }
         //提交表单后重定向至list页面
-        return new ModelAndView("redirect:/userThymeleafController/list");
+        return new ModelAndView("redirect:/userThymeleafController/list?pageNum=1&pageSize=5");
     }
 
 
@@ -87,7 +87,7 @@ public class UserThymeleafController {
         userService.deleteByPrimaryKey(id);
         model.addAttribute("userList", userService.getAllUser());
         //删除用户后重定向至list页面
-        return new ModelAndView("redirect:/userThymeleafController/list");
+        return new ModelAndView("redirect:/userThymeleafController/list?pageNum=1&pageSize=5");
     }
 
     /**
