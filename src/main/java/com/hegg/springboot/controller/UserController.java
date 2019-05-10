@@ -17,7 +17,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/hello")
+    //@RequestMapping(value = "/hello")
+    @GetMapping(value="/hello")
     public String getHello() {
         return "Hello,Word!!!世界1";
     }
